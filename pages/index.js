@@ -13,7 +13,7 @@ export default function Index({ preview, allPosts }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>Timber & Tools</title>
+          <title>Timber and Tools</title>
         </Head>
         <Container>
           <Intro />
