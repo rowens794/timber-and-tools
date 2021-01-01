@@ -17,6 +17,7 @@ export default function Post({ post, morePosts, preview }) {
   if (!router.isFallback && !post?._meta?.uid) {
     return <ErrorPage statusCode={404} />;
   }
+  console.log(post);
 
   return (
     <Layout preview={preview}>
@@ -57,6 +58,7 @@ export async function getStaticProps({ params, preview = false, previewData }) {
 
 export async function getStaticPaths() {
   const allPosts = await getAllPostsWithSlug();
+
   return {
     paths: allPosts?.map(({ node }) => `/${node._meta.uid}`) || [],
     fallback: true,
