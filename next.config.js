@@ -3,4 +3,5 @@ module.exports = {
   images: {
     domains: ["images.prismic.io"],
   },
+  trailingSlash: true,
 };
